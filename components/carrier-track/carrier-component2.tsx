@@ -2,10 +2,64 @@
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export default function CarrierComponentTwo() {
+  // State to manage the active curriculum item
+  const [activeCurriculum, setActiveCurriculum] = useState("01");
+
+  // Curriculum data
+  const curriculumItems = [
+    {
+      id: "01",
+      title: "Business Communication",
+      description: "Add-On : Optimizing Business Emails with AI",
+      topics: [
+        "Effective email writing techniques",
+        "AI tools for email optimization",
+        "Professional communication skills",
+      ],
+    },
+    {
+      id: "02",
+      title: "Profile and Resume Building",
+      description: "Add-On : AI-Driven Resume Optimization Techniques",
+      topics: [
+        "Build ATS-compliant resumes",
+        "Optimize LinkedIn profiles",
+        "AI tools for resume enhancement",
+      ],
+    },
+    {
+      id: "03",
+      title: "Interview Prep & Mock Interviews",
+      description:
+        'Add-On : Interview preparation assistance with our own AI tool "WiseChat"',
+      topics: [
+        "Common interview questions",
+        "Mock interview sessions",
+        "AI-driven interview feedback",
+      ],
+    },
+    {
+      id: "04",
+      title: "Coding & Technical Revision",
+      description: "Add-On : Automated Coding Challenges with AI",
+      topics: [
+        "Data structures and algorithms",
+        "Coding challenges with AI feedback",
+        "Technical interview preparation",
+      ],
+    },
+  ];
+
+  // Find the active curriculum data
+  const activeCurriculumData = curriculumItems.find(
+    (item) => item.id === activeCurriculum
+  );
+
   return (
-    <div className=" bg-[#111111] text-white p-8 md:p-16">
+    <div className="bg-[#111111] text-white p-8 md:p-16">
       <div className="max-w-7xl mx-auto">
         {/* Main Content Container */}
         <div className="relative">
@@ -33,30 +87,7 @@ export default function CarrierComponentTwo() {
             <div className="grid md:grid-cols-[2fr,1fr] gap-6">
               {/* Left Column - Curriculum Items */}
               <div className="space-y-4">
-                {[
-                  {
-                    id: "01",
-                    title: "Business Communication",
-                    description: "Add-On : Optimizing Business Emails with AI",
-                  },
-                  {
-                    id: "02",
-                    title: "Profile and Resume Building",
-                    description:
-                      "Add-On : AI-Driven Resume Optimization Techniques",
-                  },
-                  {
-                    id: "03",
-                    title: "Interview Prep & Mock Interviews",
-                    description:
-                      'Add-On : Interview preparation assistance with our own AI tool "WiseChat"',
-                  },
-                  {
-                    id: "04",
-                    title: "Coding & Technical Revision",
-                    description: "Add-On : Automated Coding Challenges with AI",
-                  },
-                ].map((item, index) => (
+                {curriculumItems.map((item, index) => (
                   <motion.div
                     key={item.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -68,8 +99,12 @@ export default function CarrierComponentTwo() {
                       "border border-white/5",
                       "transform transition-all duration-300",
                       "hover:bg-[#1A1F2C]/60 hover:scale-[1.02]",
-                      "group cursor-pointer"
+                      "group cursor-pointer",
+                      activeCurriculum === item.id
+                        ? "border-red-500"
+                        : "border-white/5"
                     )}
+                    onClick={() => setActiveCurriculum(item.id)}
                   >
                     <div className="flex justify-between items-center">
                       <div>
@@ -111,13 +146,7 @@ export default function CarrierComponentTwo() {
                   </span>
                 </div>
                 <ul className="space-y-3 text-sm text-white/60">
-                  {[
-                    "Build ATS Complaint Resumes and Cover Letters",
-                    "Build your LinkedIn Profile",
-                    "Build your GitHub Portfolio",
-                    "Build your own website",
-                    "Review of your portfolio",
-                  ].map((topic, index) => (
+                  {activeCurriculumData?.topics.map((topic, index) => (
                     <li key={index} className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
                       {topic}
@@ -126,25 +155,6 @@ export default function CarrierComponentTwo() {
                 </ul>
               </motion.div>
             </div>
-
-            {/* Explore Button */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex justify-end mt-8"
-            >
-              <button
-                className={cn(
-                  "bg-[#E31E24] hover:bg-[#E31E24]/90",
-                  "text-white px-6 py-2 rounded-lg",
-                  "transition-colors transform",
-                  "hover:scale-105"
-                )}
-              >
-                Explore Curriculum
-              </button>
-            </motion.div> */}
           </div>
         </div>
       </div>

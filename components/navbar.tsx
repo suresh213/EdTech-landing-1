@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-black">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-white">
       {/* <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white">
         <div className="container mx-auto px-20 py-2 flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -35,9 +35,9 @@ export default function Navbar() {
             <Link href="/" className="text-2xl font-bold">
               {/* Ed<span className="text-red-600">Tech</span> */}
               <Image
-                className="h-16"
-                height={50}
-                width={200}
+                className="h-"
+                height={40}
+                width={150}
                 src={Logo}
                 alt={""}
               ></Image>

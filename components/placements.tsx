@@ -20,10 +20,10 @@ export default function Placements() {
         {/* Stats Section with Vertical Separators */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 text-black">
           {[
-            { value: "30,000+", label: "Students" },
-            { value: "40 LPA", label: "Highest Salary" },
-            { value: "15 LPA", label: "Average Salary" },
-            { value: "700+", label: "Hiring Partners" },
+            { value: "5,000+", label: "Students" },
+            { value: "18 LPA", label: "Highest Salary" },
+            { value: "10 LPA", label: "Average Salary" },
+            { value: "450+", label: "Hiring Partners" },
           ].map((item, index) => (
             <div
               key={index}

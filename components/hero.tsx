@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Star, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import herosvg from './assets/undraw_professor_d7zn.svg'
 
 export default function Hero() {
   return (
@@ -19,12 +20,12 @@ export default function Hero() {
           </div> */}
 
           <h1 className="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight">
-            Master In-Demand Tech Skills with Our Expert-Led Courses
+            Master In-Demand Skills with Our Expert-Led Courses
           </h1>
 
-          <div className="inline-flex items-center space-x-2 bg-red-600/10 text-red-600 px-5 py-3 rounded-full">
+          {/* <div className="inline-flex items-center space-x-2 bg-red-600/10 text-red-600 px-5 py-3 rounded-full">
             <span className="">Next Cohort Starting On 21st February</span>
-          </div>
+          </div> */}
 
           {/* <div className="space-y-5">
             <p className="text-lg text-gray-400 font-medium">
@@ -49,12 +50,12 @@ export default function Hero() {
           </div> */}
 
           <ul className="space-y-5 text-lg text-gray-300">
-            <li className="flex items-center space-x-3">
+            {/* <li className="flex items-center space-x-3">
               <span className="w-3 h-3 bg-teal-400 rounded-full" />
               <span>
                 Advanced Certification from E&ICT Academy, IIT Guwahati
               </span>
-            </li>
+            </li> */}
             <li className="flex items-center space-x-3">
               <span className="w-3 h-3 bg-teal-400 rounded-full" />
               <span>6 months part-time program with online classes</span>
@@ -87,19 +88,19 @@ export default function Hero() {
 
         <div className="relative aspect-video rounded-lg overflow-hidden">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/section1-bz7vGJeXftV9EBydMdATcuoWjtVRov.jpeg"
+            src={herosvg}
             alt="IIT Guwahati Campus"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          {/* <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <Button
               size="icon"
               className="w-20 h-20 rounded-full bg-white/20 hover:bg-white/30"
             >
               <Play className="w-10 h-10 text-white" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -35,8 +35,8 @@ export default function Certification() {
                   Industry Recognised Certification
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed">
-                  AlmaBetter gives you Industry Recognised Certification as per
-                  ISO 27001 with verifiable credentials.
+                  EnormayuBetter gives you Industry Recognised Certification as
+                  per ISO 27001 with verifiable credentials.
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function Certification() {
                   Credible & Shareable
                 </h3>
                 <p className="text-gray-700 text-base leading-relaxed">
-                  You can add the AlmaBetter Certificate on your LinkedIn
+                  You can add the EnormayuBetter Certificate on your LinkedIn
                   profile, resume and even share it over Whatsapp or any other
                   social channels.
                 </p>

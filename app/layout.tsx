@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "edtech landing",
+  title: "Enormayu",
   description: "Created with v0",
   generator: "v0.dev",
 };

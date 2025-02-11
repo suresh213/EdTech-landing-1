@@ -30,7 +30,7 @@ const fullStackSkills: Skill[] = [
   },
   {
     name: "Tailwind CSS",
-    icon: "https://www.almabetter.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftailwind.a6b9cf00.png&w=64&q=75",
+    icon: "https://www.Enormayubetter.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftailwind.a6b9cf00.png&w=64&q=75",
   },
   {
     name: "NodeJS",
@@ -50,7 +50,7 @@ const fullStackSkills: Skill[] = [
   },
   {
     name: "GitHub",
-    icon: "https://www.almabetter.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgithub.805e08a0.png&w=64&q=75",
+    icon: "https://www.Enormayu.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgithub.805e08a0.png&w=64&q=75",
   },
   {
     name: "Nginx",
@@ -66,7 +66,7 @@ const fullStackSkills: Skill[] = [
   },
   {
     name: "AWS",
-    icon: "https://www.almabetter.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faws-1.a8eed5ff.png&w=64&q=75",
+    icon: "https://www.Enormayu.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faws-1.a8eed5ff.png&w=64&q=75",
   },
   {
     name: "ChatGPT",
@@ -129,7 +129,7 @@ const dataScienceSkills: Skill[] = [
   },
   {
     name: "AWS",
-    icon: "https://www.almabetter.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faws-1.a8eed5ff.png&w=64&q=75",
+    icon: "https://www.Enormayu.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Faws-1.a8eed5ff.png&w=64&q=75",
   },
   {
     name: "Docker",

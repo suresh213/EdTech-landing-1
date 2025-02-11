@@ -18,7 +18,7 @@ const stories = [
       logo: amazon,
     },
     quote:
-      "If you want to turn your skills into a professional experience, AlmaBetter is the place you can trust.",
+      "If you want to turn your skills into a professional experience, Enormayu is the place you can trust.",
   },
   {
     name: "Sri Srinivasan",
@@ -31,7 +31,7 @@ const stories = [
       logo: bajaj,
     },
     quote:
-      "AlmaBetter provides incredible features like one-on-one mentorship sessions and multiple coding problems to prepare you to appear in interviews with big companies.",
+      "Enormayu provides incredible features like one-on-one mentorship sessions and multiple coding problems to prepare you to appear in interviews with big companies.",
   },
   {
     name: "Vaibhav Thorat",
@@ -44,7 +44,7 @@ const stories = [
       logo: accenture,
     },
     quote:
-      "This shows what I have learned at AlmaBetter is at par with the current industry standards.",
+      "This shows what I have learned at Enormayu is at par with the current industry standards.",
   },
 ];
 
@@ -71,14 +71,14 @@ export default function SuccessStories() {
               key={index}
               className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all overflow-hidden flex flex-col h-full w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[500px] xl:max-w-[550px] mx-auto"
             >
-              <div className="relative h-48 w-full ">
+              {/* <div className="relative h-48 w-full ">
                 <Image
                   src=""
                   alt={story.name}
                   fill
                   className="object-cover"
                 />
-              </div>
+              </div> */}
 
               <div className="p-6 flex flex-col flex-grow">
                 {/* Before/After badges */}

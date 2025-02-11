@@ -1,133 +1,139 @@
-'use client'
+"use client";
 
+import { motion } from "framer-motion";
+import { Users, Briefcase, Award } from "lucide-react";
 import Image from "next/image";
-import amazon from './assets/amazon.jpeg'
-import bajaj from "./assets/bajaj.jpeg";
-import accenture from "./assets/accenture.jpeg";
-import ame from "./assets/ame_express.jpeg";
-import hcl from "./assets/hcl.jpeg"
-import mahendra from "./assets/mahindra.jpeg"
-import paytm from './assets/paytm.jpeg'
-import swiggy from './assets/swiggy.jpeg'
-import tata from './assets/tata.jpeg'
-import infosys from './assets/infosys.jpeg'
-import piyaau from './assets/piyaau.jpeg'
-import jindal from './assets/jindal.jpeg'
-import conduent from './assets/conduent.jpeg'
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
-export default function HiringPartners() {
-  const partners = [
-    amazon,
-    jindal,
-    hcl,
-    conduent,
-    mahendra,
-    ame,
-    accenture,
-    paytm,
-    swiggy,
-    tata,
-    infosys,
-    piyaau,
-    bajaj,
-  ];
+const stats = [
+  { icon: Users, value: "5000+", label: "Learners" },
+  { icon: Briefcase, value: "92%", label: "Placement Rate" },
+  { icon: Award, value: "150+", label: "Industry Experts" },
+];
+
+const companies = [
+  { name: "Amazon", logo: "https://img.logo.dev/amazon.com" },
+  { name: "Freshworks", logo: "https://img.logo.dev/freshworks.com" },
+  { name: "Chargebee", logo: "https://img.logo.dev/chargebee.com" },
+  { name: "Zoho", logo: "https://img.logo.dev/zoho.com" },
+  { name: "Browserstack", logo: "https://img.logo.dev/browserstack.com" },
+  { name: "Postman", logo: "https://img.logo.dev/postman.com" },
+  { name: "Hasura", logo: "https://img.logo.dev/hasura.io" },
+  { name: "Innovaccer", logo: "https://img.logo.dev/innovaccer.com" },
+  { name: "Clevertap", logo: "https://img.logo.dev/clevertap.com" },
+  { name: "Druva", logo: "https://img.logo.dev/druva.com" },
+  { name: "Gupshup", logo: "https://img.logo.dev/gupshup.io" },
+  { name: "Mindtickle", logo: "https://img.logo.dev/mindtickle.com" },
+  { name: "Whatfix", logo: "https://img.logo.dev/whatfix.com" },
+  { name: "Kissflow", logo: "https://img.logo.dev/kissflow.com" },
+  { name: "Amagi", logo: "https://img.logo.dev/amagi.com" },
+  { name: "Zenoti", logo: "https://img.logo.dev/zenoti.com" },
+  { name: "Darwinbox", logo: "https://img.logo.dev/darwinbox.com" },
+  { name: "Facilio", logo: "https://img.logo.dev/facilio.com" },
+  { name: "Hiver", logo: "https://img.logo.dev/hiverhq.com" },
+  { name: "Yellow.ai", logo: "https://img.logo.dev/yellow.ai" },
+  { name: "Zinier", logo: "https://img.logo.dev/zinier.com" },
+  { name: "Rippling", logo: "https://img.logo.dev/rippling.com" },
+  { name: "Apna", logo: "https://img.logo.dev/apna.co" },
+  { name: "Khatabook", logo: "https://img.logo.dev/khatabook.com" },
+  { name: "Dukaan", logo: "https://img.logo.dev/mydukaan.io" },
+  { name: "Polygon", logo: "https://img.logo.dev/polygon.technology" },
+  { name: "Mfine", logo: "https://img.logo.dev/mfine.in" },
+  { name: "Zetwerk", logo: "https://img.logo.dev/zetwerk.com" },
+  { name: "Groww", logo: "https://img.logo.dev/groww.in" },
+  { name: "Upstox", logo: "https://img.logo.dev/upstox.com" },
+  { name: "Urban Company", logo: "https://img.logo.dev/urbancompany.com" },
+  { name: "CoinDCX", logo: "https://img.logo.dev/coindcx.com" },
+];
+
+const CompanyLogo = ({ company }: { company: (typeof companies)[0] }) => {
+  const [imageError, setImageError] = useState(false);
+  const logoUrl = `${company.logo}?token=pk_WMAMe2_zSEGPmLxKYFr-gA&theme=dark&background=transparent`;
 
   return (
-    <section className="py-16 px-4 bg-gray-50 overflow-hidden">
-      <div className="container mx-auto space-y-8">
-        <h2 className="text-4xl font-bold text-center text-black">
-          Our Hiring{" "}
-          <span className="text-red-600 underline decoration-red-600">
-            Partners
-          </span>
-        </h2>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center"
+    >
+      <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-22 lg:h-22 rounded-xl border border-gray-200 hover:border-gray-400 flex items-center justify-center mb-2 sm:mb-3 p-2 sm:p-3 md:p-4 transition-all duration-300 group hover:shadow-sm">
+        {imageError ? (
+          <div className="text-xs sm:text-sm md:text-base font-semibold text-gray-600">
+            {company.name}
+          </div>
+        ) : (
+          <Image
+            src={logoUrl}
+            alt={company.name}
+            width={80}
+            height={80}
+            className="object-contain transition-transform duration-300 group-hover:scale-110"
+            onError={() => setImageError(true)}
+            unoptimized
+          />
+        )}
+      </div>
+      <p className="text-xs sm:text-sm text-gray-600 text-center font-medium group-hover:text-gray-900 transition-colors duration-300 line-clamp-1">
+        {company.name}
+      </p>
+    </motion.div>
+  );
+};
 
-        {/* Rows Wrapper */}
-        <div className="space-y-4">
-          {/* First Row (Left -> Right) */}
-          <Marquee images={partners} speed={30} direction="left" />
+export default function Stats() {
+  return (
+    <section className="py-24 bg-[#F8F9FA] relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl text-[#002E2C]">
+            500+ Success Stories
+          </h2>
+          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            and growing stronger with each passing day
+          </p>
+        </motion.div>
 
-          {/* Middle Row (Right -> Left) */}
-          <Marquee images={partners} speed={25} direction="right" />
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-16">
+          {companies.map((company, index) => (
+            <CompanyLogo key={company.name} company={company} />
+          ))}
+        </div>
 
-          {/* Last Row (Left -> Right) */}
-          <Marquee images={partners} speed={30} direction="left" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 text-center shadow-lg"
+            >
+              <div className="flex justify-center mb-4">
+                <stat.icon className="w-12 h-12 text-[#002E2C]" />
+              </div>
+              <h3 className="text-3xl font-bold text-[#002E2C] mb-2">
+                {stat.value}
+              </h3>
+              <p className="text-gray-600 text-lg">{stat.label}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button className="bg-[#002E2C] hover:bg-[#004D4A] text-white text-lg px-8 py-3 rounded-full">
+            Explore Programs
+          </Button>
         </div>
       </div>
     </section>
   );
 }
-
-// Marquee Component (Handles the scrolling animation)
-const Marquee = ({
-  images,
-  direction,
-  speed,
-}: {
-  images: string[];
-  direction: "left" | "right";
-  speed: number;
-}) => {
-  return (
-    <div className="relative w-full overflow-hidden">
-      <div
-        className={`flex space-x-8 ${
-          direction === "left"
-            ? "animate-marquee-left"
-            : "animate-marquee-right"
-        }`}
-        style={{ animationDuration: `${speed}s` }}
-      >
-        {images.concat(images).map(
-          (
-            src,
-            i // Duplicate images for seamless loop
-          ) => (
-            <div
-              key={i}
-              className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm min-w-[150px]"
-            >
-              <Image
-                src={src}
-                alt={`Partner ${i + 1}`}
-                width={120}
-                height={40}
-                className="object-contain"
-              />
-            </div>
-          )
-        )}
-      </div>
-
-      {/* Tailwind Custom Animations */}
-      <style jsx>{`
-        @keyframes marquee-left {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
-        @keyframes marquee-right {
-          from {
-            transform: translateX(-50%);
-          }
-          to {
-            transform: translateX(0);
-          }
-        }
-        .animate-marquee-left {
-          display: flex;
-          width: max-content;
-          animation: marquee-left linear infinite;
-        }
-        .animate-marquee-right {
-          display: flex;
-          width: max-content;
-          animation: marquee-right linear infinite;
-        }
-      `}</style>
-    </div>
-  );
-};

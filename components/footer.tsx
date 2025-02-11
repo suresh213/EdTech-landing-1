@@ -1,166 +1,157 @@
-import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Twitter, Youtube, Send } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+  Send,
+} from "lucide-react";
 import Image from "next/image";
-import logo from './assets/logo.png'
+import logo from "./assets/logo.png";
 
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-400 py-16 px-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="/">
-              {/* <span className="text-red-600">Enormayu</span> */}
-              <Image src={logo} alt={"Enormayu"}></Image>
+            <Link href="/" className="inline-block">
+              <Image
+                src={logo}
+                alt="Enormayu"
+                width={150}
+                height={50}
+                className="hover:opacity-80 transition-opacity"
+              />
             </Link>
 
-            <div className="space-y-4 md:pl-7">
+            <div className="space-y-4">
               <div>
-                <h4 className="text-white mb-2">Contact Us</h4>
-                <p>admissions@Enormayu.com</p>
-                <p>+91 9606334692</p>
+                <h4 className="text-white text-lg font-semibold mb-3">
+                  Contact Us
+                </h4>
+                <p className="hover:text-white transition-colors">
+                  <a href="mailto:admissions@Enormayu.com">
+                    admissions@Enormayu.com
+                  </a>
+                </p>
+                <p className="hover:text-white transition-colors">
+                  <a href="tel:+919606334692">+91 9606334692</a>
+                </p>
               </div>
 
               <div>
-                <h4 className="text-white mb-2">Official Address</h4>
-                <p>
+                <h4 className="text-white text-lg font-semibold mb-3">
+                  Official Address
+                </h4>
+                <p className="hover:text-white transition-colors">
                   Address 76, Hosa Rd, near Sarjapur Main Road, Valliyamma
                   Layout, Kasavanahalli, Bengaluru, Karnataka 560035
                 </p>
               </div>
             </div>
+          </div>
 
-            <div className="space-y-4 md:pl-7">
-              <h4 className="text-white">Follow Us</h4>
-              <div className="flex space-x-4">
-                <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
-                <Instagram className="w-5 h-5 hover:text-white cursor-pointer" />
-                <Linkedin className="w-5 h-5 hover:text-white cursor-pointer" />
-                <Twitter className="w-5 h-5 hover:text-white cursor-pointer" />
-                <Youtube className="w-5 h-5 hover:text-white cursor-pointer" />
-                <Send className="w-5 h-5 hover:text-white cursor-pointer" />
+          {/* Social Media Links */}
+          <div className="space-y-4">
+            <h4 className="text-white text-lg font-semibold">Follow Us</h4>
+            <div className="flex space-x-4">
+              {[
+                { icon: Facebook, link: "https://facebook.com" },
+                { icon: Instagram, link: "https://instagram.com" },
+                { icon: Linkedin, link: "https://linkedin.com" },
+                { icon: Twitter, link: "https://twitter.com" },
+                { icon: Youtube, link: "https://youtube.com" },
+                { icon: Send, link: "https://telegram.com" },
+              ].map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <social.icon className="w-6 h-6" />
+                </a>
+              ))}
               </div>
-            </div>
           </div>
 
           {/* Company Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Success Stories
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Hire From Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Careers
-                </Link>
-              </li>
+          {/* <div>
+            <h3 className="text-white text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-3">
+              {[
+                { label: "Success Stories", href: "#" },
+                { label: "About Us", href: "#" },
+                { label: "Hire From Us", href: "#" },
+                { label: "Careers", href: "#" },
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Courses Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Courses</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Certification in Full Stack Data Science and AI
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  Certification in Full Stack Web Development
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  MS in Computer Science: Artificial Intelligence and Machine
-                  Learning
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white">
-                  MS in Computer Science: Cloud Computing
-                </Link>
-              </li>
+          {/* <div>
+            <h3 className="text-white text-lg font-semibold mb-4">Courses</h3>
+            <ul className="space-y-3">
+              {[
+                {
+                  label: "Certification in Full Stack Data Science and AI",
+                  href: "#",
+                },
+                {
+                  label: "Certification in Full Stack Web Development",
+                  href: "#",
+                },
+                {
+                  label:
+                    "MS in Computer Science: Artificial Intelligence and Machine Learning",
+                  href: "#",
+                },
+                { label: "MS in Computer Science: Cloud Computing", href: "#" },
+              ].map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </div> */}
+        </div>
 
-          {/* Resources & Join Links */}
-          <div className="grid gap-8">
-            <div>
-              <h3 className="text-white font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Events
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Community
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Placement Statistics
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Online Compilers
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        {/* Divider */}
+        <div className="border-t border-gray-800 my-12"></div>
 
-            <div>
-              <h3 className="text-white font-semibold mb-4">Join AlmaBetter</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Sign Up
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Become an Affiliate
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Become A Coach
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    Coach Login
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        {/* Bottom Section */}
+        <div className="text-center text-sm text-gray-500">
+          <p>
+            &copy; {new Date().getFullYear()} Enormayu. All rights reserved.
+          </p>
+          <div className="mt-2 space-x-4">
+            <Link href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
-

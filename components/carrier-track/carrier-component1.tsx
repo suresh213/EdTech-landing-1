@@ -27,9 +27,7 @@ export default function CareerComponentOne() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-2xl md:text-3xl font-bold text-white/90"
             >
-              <span className="">
-                Enormayu Eligibility Requirements
-              </span>
+              <span className="">Enormayu Eligibility Requirements</span>
             </motion.h2>
 
             {/* Cards Grid */}
@@ -52,8 +50,7 @@ export default function CareerComponentOne() {
                 },
                 {
                   id: 3,
-                  title:
-                    "AlmaBetter Comprehensibility Assessment Test (AB-CAT)",
+                  title: "Enormayu Comprehensibility Assessment Test (AB-CAT)",
                   description: "Take entrance exam for Enormayu.",
                   image:
                     "https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2Fim3_6498bef35e.png&w=256&q=75",
