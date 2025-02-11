@@ -62,14 +62,14 @@ export default function Certification() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          {/* <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-base font-medium rounded-[10px]">
               Explore Program
             </Button>
             <Button className="border-2 border-red-500 text-red-500 px-8 py-3 text-base font-medium rounded-[10px] bg-red-100 hover:bg-red-200 transition-all duration-200 hover:shadow-[inset_0_0_0_1px_rgba(239,68,68,0.2)]">
               Download Brochure
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
