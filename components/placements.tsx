@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Placements() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center py-16 px-6 md:px-12 lg:px-20 bg-white">
+    <section className="w-full pt-36 pb-28 flex items-center justify-center py-16 px-6 md:px-12 lg:px-20 bg-white">
       <div className="container mx-auto text-center space-y-10">
         <h2 className="text-6xl md:text-4xl text-black font-bold leading-tight">
           Industry Leading{" "}
@@ -37,9 +37,9 @@ export default function Placements() {
           ))}
         </div>
 
-        <Button className="bg-red-600 hover:bg-red-700 px-8 py-6 text-base font-semibold rounded-md shadow-md transition-all">
+        {/* <Button className="bg-red-600 hover:bg-red-700 px-8 py-6 text-base font-semibold rounded-md shadow-md transition-all">
           Download Placement Report
-        </Button>
+        </Button> */}
       </div>
     </section>
   );

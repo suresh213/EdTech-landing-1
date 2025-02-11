@@ -43,13 +43,13 @@ export default function Navbar() {
               ></Image>
             </Link>
 
-            <button className="flex items-center space-x-1">
+            {/* <button className="flex items-center space-x-1">
               <span>Courses</span>
               <ChevronDown className="w-4 h-4" />
-            </button>
+            </button> */}
           </div>
 
-          <div className="hidden md:flex text-white items-center space-x-6">
+          {/* <div className="hidden md:flex text-white items-center space-x-6">
             <Link href="#" className="hover:text-gray-300">
               Practice
             </Link>
@@ -69,14 +69,14 @@ export default function Navbar() {
               About Us
             </Link>
             <Button className="bg-red-600 hover:bg-red-700">SIGN IN</Button>
-          </div>
+          </div> */}
 
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {/* <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             <Menu className="w-6 h-6" />
-          </button>
+          </button> */}
         </div>
 
-        {isOpen && (
+        {/* {isOpen && (
           <div className="md:hidden mt-4 space-y-4">
             <Link href="#" className="block hover:text-gray-300">
               Practice
@@ -100,7 +100,7 @@ export default function Navbar() {
               SIGN IN
             </Button>
           </div>
-        )}
+        )} */}
       </nav>
     </header>
   );

@@ -2,9 +2,9 @@ import Image from "next/image";
 import { ArrowRight, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import storyImage from "./assets/story-image.png";
-import companyLogo1 from "./assets/story-image.png";
-import companyLogo2 from "./assets/story-image.png";
-import companyLogo3 from "./assets/story-image.png";
+import amazon from "./assets/amazon.jpeg";
+import bajaj from "./assets/bajaj.jpeg";
+import accenture from "./assets/accenture.jpeg";
 
 const stories = [
   {
@@ -14,8 +14,8 @@ const stories = [
     after: "Web Developer",
     graduate: "Graduate",
     company: {
-      name: "ZEDD ARK",
-      logo: companyLogo1,
+      name: "amazon",
+      logo: amazon,
     },
     quote:
       "If you want to turn your skills into a professional experience, AlmaBetter is the place you can trust.",
@@ -27,8 +27,8 @@ const stories = [
     after: "Junior Developer",
     graduate: "Graduate",
     company: {
-      name: "MATDUN",
-      logo: companyLogo2,
+      name: "bajaj",
+      logo: bajaj,
     },
     quote:
       "AlmaBetter provides incredible features like one-on-one mentorship sessions and multiple coding problems to prepare you to appear in interviews with big companies.",
@@ -40,8 +40,8 @@ const stories = [
     after: "Software Developer",
     graduate: "Graduate",
     company: {
-      name: "BONDSINDIA",
-      logo: companyLogo3,
+      name: "accenture",
+      logo: accenture,
     },
     quote:
       "This shows what I have learned at AlmaBetter is at par with the current industry standards.",
@@ -73,7 +73,7 @@ export default function SuccessStories() {
             >
               <div className="relative h-48 w-full ">
                 <Image
-                  src={story.image}
+                  src=""
                   alt={story.name}
                   fill
                   className="object-cover"
@@ -138,12 +138,12 @@ export default function SuccessStories() {
                 </p>
 
                 {/* Read More */}
-                <Button
+                {/* <Button
                   variant="link"
                   className="p-0 text-red-600 font-semibold self-start hover:no-underline text-base lg:text-lg"
                 >
                   Read More
-                </Button>
+                </Button> */}
               </div>
             </div>
           ))}

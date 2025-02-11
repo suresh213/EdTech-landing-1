@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="pt-40 pb-16 px-4">
-      <div className="container mx-auto max-w-[1900px] px-4 md:px-8 lg:px-12 xl:px-20 grid md:grid-cols-2 gap-8 items-center">
+    <section className="pt-20 px-4">
+      <div className="container h-screen mx-auto max-w-[1900px] px-4 md:px-8 lg:px-12 xl:px-20 grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-8">
-          <div className="flex items-center space-x-3">
+          {/* <div className="flex items-center space-x-3">
             <span className="text-2xl font-bold">4.6</span>
             {[...Array(5)].map((_, i) => (
               <Star
@@ -16,7 +16,7 @@ export default function Hero() {
               />
             ))}
             <span className="text-lg text-gray-400">1467 Reviews</span>
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight">
             Master In-Demand Tech Skills with Our Expert-Led Courses
@@ -26,7 +26,7 @@ export default function Hero() {
             <span className="">Next Cohort Starting On 21st February</span>
           </div>
 
-          <div className="space-y-5">
+          {/* <div className="space-y-5">
             <p className="text-lg text-gray-400 font-medium">
               In collaboration with:
             </p>
@@ -46,7 +46,7 @@ export default function Hero() {
                 className="object-contain"
               />
             </div>
-          </div>
+          </div> */}
 
           <ul className="space-y-5 text-lg text-gray-300">
             <li className="flex items-center space-x-3">
@@ -75,14 +75,14 @@ export default function Hero() {
             </li>
           </ul>
 
-          <div className="flex items-center space-x-6">
+          {/* <div className="flex items-center space-x-6">
             <Button className="bg-red-600 hover:bg-red-700 text-lg px-6 py-6">
               Explore Program
             </Button>
             <Button variant="outline" className="text-lg px-6 py-6 text-black">
               Enrol Now
             </Button>
-          </div>
+          </div> */}
         </div>
 
         <div className="relative aspect-video rounded-lg overflow-hidden">

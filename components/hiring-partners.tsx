@@ -5,18 +5,31 @@ import amazon from './assets/amazon.jpeg'
 import bajaj from "./assets/bajaj.jpeg";
 import accenture from "./assets/accenture.jpeg";
 import ame from "./assets/ame_express.jpeg";
+import hcl from "./assets/hcl.jpeg"
+import mahendra from "./assets/mahindra.jpeg"
+import paytm from './assets/paytm.jpeg'
+import swiggy from './assets/swiggy.jpeg'
+import tata from './assets/tata.jpeg'
+import infosys from './assets/infosys.jpeg'
+import piyaau from './assets/piyaau.jpeg'
+import jindal from './assets/jindal.jpeg'
+import conduent from './assets/conduent.jpeg'
+
 export default function HiringPartners() {
   const partners = [
     amazon,
+    jindal,
+    hcl,
+    conduent,
+    mahendra,
     ame,
     accenture,
+    paytm,
+    swiggy,
+    tata,
+    infosys,
+    piyaau,
     bajaj,
-    ame,
-    accenture,
-    bajaj,
-    ame,
-    accenture,
-    amazon,
   ];
 
   return (
