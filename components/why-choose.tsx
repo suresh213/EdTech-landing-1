@@ -51,12 +51,12 @@ export default function WhyChoose() {
           <h2 className="text-3xl font-bold text-gray-900">
             Why Choose{" "}
             <span className="text-red-500 underline decoration-red-500">
-              AlmaBetter
+              Enormayu
             </span>
             ?
           </h2>
           <p className="text-gray-500 max-w-3xl mx-auto">
-            AlmaBetter offers extensive list of services to help you become Job
+            Enormayu offers extensive list of services to help you become Job
             ready.
           </p>
         </div>

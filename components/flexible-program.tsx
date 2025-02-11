@@ -81,7 +81,7 @@ export default function FlexibleProgram() {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* <div className="flex flex-wrap justify-center gap-4">
             <Button
               className="bg-red-600 hover:bg-red-700 rounded-full px-6"
               size="lg"
@@ -95,7 +95,7 @@ export default function FlexibleProgram() {
             >
               Download Placement Report
             </Button>
-          </div>
+          </div> */}
         </motion.div>
       </section>
     </div>
