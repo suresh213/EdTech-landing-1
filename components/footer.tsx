@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Twitter, Youtube, Send } from "lucide-react"
+import Image from "next/image";
+import logo from './assets/logo.png'
 
 export default function Footer() {
   return (
@@ -8,27 +10,28 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="/" className="text-2xl font-bold text-white">
-              <span className="text-red-600">Enormayu</span>
+            <Link href="/">
+              {/* <span className="text-red-600">Enormayu</span> */}
+              <Image src={logo} alt={"Enormayu"}></Image>
             </Link>
 
-            <div className="space-y-4">
+            <div className="space-y-4 md:pl-7">
               <div>
                 <h4 className="text-white mb-2">Contact Us</h4>
-                <p>admissions@aEnormayu.com</p>
-                <p>08046008400</p>
+                <p>admissions@Enormayu.com</p>
+                <p>+91 9606334692</p>
               </div>
 
               <div>
                 <h4 className="text-white mb-2">Official Address</h4>
                 <p>
-                  4th floor, 133/2, Janardhan Towers, Residency Road, Bengaluru,
-                  Karnataka, 560025
+                  Address 76, Hosa Rd, near Sarjapur Main Road, Valliyamma
+                  Layout, Kasavanahalli, Bengaluru, Karnataka 560035
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 md:pl-7">
               <h4 className="text-white">Follow Us</h4>
               <div className="flex space-x-4">
                 <Facebook className="w-5 h-5 hover:text-white cursor-pointer" />
