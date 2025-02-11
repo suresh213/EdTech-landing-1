@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ChevronDown, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import Logo from './logo3.png'
+import Logo from './assets/logo3.png'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 

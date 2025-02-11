@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { ArrowRight, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import storyImage from "./story-image.png";
-import companyLogo1 from "./story-image.png";
-import companyLogo2 from "./story-image.png";
-import companyLogo3 from "./story-image.png";
+import storyImage from "./assets/story-image.png";
+import companyLogo1 from "./assets/story-image.png";
+import companyLogo2 from "./assets/story-image.png";
+import companyLogo3 from "./assets/story-image.png";
 
 const stories = [
   {

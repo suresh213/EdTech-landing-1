@@ -19,13 +19,11 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-5xl lg:text-5xl font-bold leading-tight">
-            Certification in Full Stack Web Development
+            Master In-Demand Tech Skills with Our Expert-Led Courses
           </h1>
 
           <div className="inline-flex items-center space-x-2 bg-red-600/10 text-red-600 px-5 py-3 rounded-full">
-            <span className="">
-              Next Cohort Starting On 21st February
-            </span>
+            <span className="">Next Cohort Starting On 21st February</span>
           </div>
 
           <div className="space-y-5">

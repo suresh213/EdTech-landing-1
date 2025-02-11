@@ -9,19 +9,22 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="text-2xl font-bold text-white">
-              Alma<span className="text-red-600">Better</span>
+              <span className="text-red-600">Enormayu</span>
             </Link>
 
             <div className="space-y-4">
               <div>
                 <h4 className="text-white mb-2">Contact Us</h4>
-                <p>admissions@almabetter.com</p>
+                <p>admissions@aEnormayu.com</p>
                 <p>08046008400</p>
               </div>
 
               <div>
                 <h4 className="text-white mb-2">Official Address</h4>
-                <p>4th floor, 133/2, Janardhan Towers, Residency Road, Bengaluru, Karnataka, 560025</p>
+                <p>
+                  4th floor, 133/2, Janardhan Towers, Residency Road, Bengaluru,
+                  Karnataka, 560025
+                </p>
               </div>
             </div>
 
@@ -81,7 +84,8 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="hover:text-white">
-                  MS in Computer Science: Artificial Intelligence and Machine Learning
+                  MS in Computer Science: Artificial Intelligence and Machine
+                  Learning
                 </Link>
               </li>
               <li>
@@ -154,6 +158,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
