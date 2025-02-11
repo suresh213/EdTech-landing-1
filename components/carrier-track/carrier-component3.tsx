@@ -77,7 +77,7 @@ const CarrierComponentThree = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-[#111111] p-8 md:p-16">
+    <div className=" bg-[#111111] p-8 md:p-16">
       <div className="max-w-7xl mx-auto">
         <div className="relative mb-12">
           <motion.div

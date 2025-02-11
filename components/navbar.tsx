@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-black">
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white">
+      {/* <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white">
         <div className="container mx-auto px-20 py-2 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span>📅</span>
@@ -27,7 +27,7 @@ export default function Navbar() {
             Book Now
           </Button>
         </div>
-      </div>
+      </div> */}
 
       <nav className="container mx-auto px-4 py-4 lg:max-w-full ">
         <div className="flex items-center justify-between">

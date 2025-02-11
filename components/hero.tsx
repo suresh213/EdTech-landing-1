@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="pt-20 px-4">
+    <section className="pt-10 px-4">
       <div className="container h-screen mx-auto max-w-[1900px] px-4 md:px-8 lg:px-12 xl:px-20 grid md:grid-cols-2 gap-8 items-center">
         <div className="space-y-8">
           {/* <div className="flex items-center space-x-3">

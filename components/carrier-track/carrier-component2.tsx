@@ -1,139 +1,150 @@
+"use client";
 import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export default function CarrierComponentTwo() {
   return (
-    <div className="min-h-screen bg-zinc-950 text-white p-8">
-      <div className="max-w-6xl mx-auto">
+    <div className=" bg-[#111111] text-white p-8 md:p-16">
+      <div className="max-w-7xl mx-auto">
         {/* Main Content Container */}
         <div className="relative">
           {/* Number Indicator */}
-          <div className="absolute -left-12 top-0">
-            <div className="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold">
-              2
-            </div>
-            <div className="absolute top-10 left-1/2 w-0.5 h-full bg-red-600 -translate-x-1/2" />
-          </div>
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="absolute -left-12 -top-2 w-12 h-12 rounded-full bg-[#E31E24] flex items-center justify-center text-white font-bold text-xl"
+          >
+            2
+          </motion.div>
 
           {/* Curriculum Section */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold">Enormayu Curriculum</h2>
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-2xl md:text-3xl font-bold text-white/90 ml-4"
+            >
+              Enormayu Curriculum
+            </motion.h2>
 
             <div className="grid md:grid-cols-[2fr,1fr] gap-6">
               {/* Left Column - Curriculum Items */}
               <div className="space-y-4">
-                {/* Business Communication */}
-                <div className="p-4 rounded-lg bg-zinc-900/50 hover:bg-zinc-900 transition-colors cursor-pointer">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-red-500 text-sm">01</span>
-                        <h3 className="text-lg font-semibold">
-                          Business Communication
-                        </h3>
+                {[
+                  {
+                    id: "01",
+                    title: "Business Communication",
+                    description: "Add-On : Optimizing Business Emails with AI",
+                  },
+                  {
+                    id: "02",
+                    title: "Profile and Resume Building",
+                    description:
+                      "Add-On : AI-Driven Resume Optimization Techniques",
+                  },
+                  {
+                    id: "03",
+                    title: "Interview Prep & Mock Interviews",
+                    description:
+                      'Add-On : Interview preparation assistance with our own AI tool "WiseChat"',
+                  },
+                  {
+                    id: "04",
+                    title: "Coding & Technical Revision",
+                    description: "Add-On : Automated Coding Challenges with AI",
+                  },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className={cn(
+                      "p-6 rounded-xl",
+                      "bg-[#1A1F2C]/40 backdrop-blur-sm",
+                      "border border-white/5",
+                      "transform transition-all duration-300",
+                      "hover:bg-[#1A1F2C]/60 hover:scale-[1.02]",
+                      "group cursor-pointer"
+                    )}
+                  >
+                    <div className="flex justify-between items-center">
+                      <div>
+                        <div className="flex items-center gap-3">
+                          <span className="text-red-500 text-sm">
+                            {item.id}
+                          </span>
+                          <h3 className="text-lg font-semibold text-white/90">
+                            {item.title}
+                          </h3>
+                        </div>
+                        <p className="text-sm text-white/60 mt-1">
+                          {item.description}
+                        </p>
                       </div>
-                      <p className="text-sm text-zinc-400 mt-1">
-                        Add-On : Optimizing Business Emails with AI
-                      </p>
+                      <ChevronRight className="text-zinc-400 group-hover:text-white transition-colors" />
                     </div>
-                    <ChevronRight className="text-zinc-400" />
-                  </div>
-                </div>
-
-                {/* Profile and Resume Building */}
-                <div className="p-4 rounded-lg bg-zinc-900/50 hover:bg-zinc-900 transition-colors cursor-pointer">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-red-500 text-sm">02</span>
-                        <h3 className="text-lg font-semibold">
-                          Profile and Resume Building
-                        </h3>
-                      </div>
-                      <p className="text-sm text-zinc-400 mt-1">
-                        Add-On : AI-Driven Resume Optimization Techniques
-                      </p>
-                    </div>
-                    <ChevronRight className="text-zinc-400" />
-                  </div>
-                </div>
-
-                {/* Interview Prep */}
-                <div className="p-4 rounded-lg bg-zinc-900/50 hover:bg-zinc-900 transition-colors cursor-pointer">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-red-500 text-sm">03</span>
-                        <h3 className="text-lg font-semibold">
-                          Interview Prep & Mock Interviews
-                        </h3>
-                      </div>
-                      <p className="text-sm text-zinc-400 mt-1">
-                        Add-On : Interview preparation assistance with our own
-                        AI tool "WiseChat"
-                      </p>
-                    </div>
-                    <ChevronRight className="text-zinc-400" />
-                  </div>
-                </div>
-
-                {/* Coding & Technical Revision */}
-                <div className="p-4 rounded-lg bg-zinc-900/50 hover:bg-zinc-900 transition-colors cursor-pointer">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-red-500 text-sm">04</span>
-                        <h3 className="text-lg font-semibold">
-                          Coding & Technical Revision
-                        </h3>
-                      </div>
-                      <p className="text-sm text-zinc-400 mt-1">
-                        Add-On : Automated Coding Challenges with AI
-                      </p>
-                    </div>
-                    <ChevronRight className="text-zinc-400" />
-                  </div>
-                </div>
+                  </motion.div>
+                ))}
               </div>
 
               {/* Right Column - Topics */}
-              <div className="bg-zinc-900/50 rounded-lg p-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className={cn(
+                  "bg-[#1A1F2C]/40 backdrop-blur-sm",
+                  "border border-white/5",
+                  "rounded-xl p-6",
+                  "transform transition-all duration-300",
+                  "hover:bg-[#1A1F2C]/60 hover:scale-[1.02]"
+                )}
+              >
                 <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-lg font-semibold">Topic</h3>
-                  <span className="text-sm text-zinc-400">
+                  <h3 className="text-lg font-semibold text-white/90">Topic</h3>
+                  <span className="text-sm text-white/60">
                     Duration: <span className="text-red-500">15 Days</span>
                   </span>
                 </div>
-                <ul className="space-y-3 text-sm">
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-                    Build ATS Complaint Resumes and Cover Letters
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-                    Build your LinkedIn Profile
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-                    Build your GitHub Portfolio
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-                    Build your own website
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
-                    Review of your portfolio
-                  </li>
+                <ul className="space-y-3 text-sm text-white/60">
+                  {[
+                    "Build ATS Complaint Resumes and Cover Letters",
+                    "Build your LinkedIn Profile",
+                    "Build your GitHub Portfolio",
+                    "Build your own website",
+                    "Review of your portfolio",
+                  ].map((topic, index) => (
+                    <li key={index} className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+                      {topic}
+                    </li>
+                  ))}
                 </ul>
-              </div>
+              </motion.div>
             </div>
 
             {/* Explore Button */}
-            <div className="flex justify-end mt-8">
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition-colors">
+            {/* <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex justify-end mt-8"
+            >
+              <button
+                className={cn(
+                  "bg-[#E31E24] hover:bg-[#E31E24]/90",
+                  "text-white px-6 py-2 rounded-lg",
+                  "transition-colors transform",
+                  "hover:scale-105"
+                )}
+              >
                 Explore Curriculum
               </button>
-            </div>
+            </motion.div> */}
           </div>
         </div>
       </div>
