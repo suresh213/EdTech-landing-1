@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ChevronDown, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import Logo from './assets/logo3.png'
+import logo from './assets/logo.png'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -32,15 +32,14 @@ export default function Navbar() {
       <nav className="container mx-auto px-4 py-4 lg:max-w-full ">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
-            <Link href="/" className="text-2xl font-bold">
-              {/* Ed<span className="text-red-600">Tech</span> */}
+            <Link href="/" className="inline-block">
               <Image
-                className="h-"
-                height={40}
+                src={logo}
+                alt="Enormayu"
                 width={150}
-                src={Logo}
-                alt={""}
-              ></Image>
+                height={50}
+                className="hover:opacity-80 transition-opacity"
+              />
             </Link>
 
             {/* <button className="flex items-center space-x-1">
