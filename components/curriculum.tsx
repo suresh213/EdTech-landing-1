@@ -18,8 +18,6 @@ const fullStackModules = [
       "JavaScript Loops & Control Statements",
       "JavaScript Arrays and Strings",
       "JavaScript Objects and JSON",
-      "Functions in JavaScript - Basics",
-      "Functions in JavaScript - Advanced",
     ],
     duration: "1 month",
   },
