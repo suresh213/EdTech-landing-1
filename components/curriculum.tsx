@@ -87,83 +87,96 @@ const fullStackModules = [
   },
 ];
 
-const dataScienceModules = [
+const digitalMarketingModules = [
   {
     number: "01",
-    title: "Foundations of Data Science",
-    subtitle: "Add-On : Advanced Data Analysis with ChatGPT",
+    title: "Introduction to Digital Marketing",
+    subtitle: "Add-On : AI-Powered Marketing Strategies",
     topics: [
-      "Introduction to Python Programming",
-      "Data Types and Structures",
-      "NumPy and Pandas Fundamentals",
-      "Data Cleaning and Preprocessing",
-      "Exploratory Data Analysis",
-      "Statistical Foundations",
-      "Probability Theory",
-      "Data Visualization with Python",
+      "Overview of Digital Marketing",
+      "Digital Marketing Channels",
+      "Customer Journey Mapping",
+      "Marketing Funnels",
+      "Content Marketing Basics",
+      "SEO Fundamentals",
+      "Social Media Marketing Overview",
     ],
-    duration: "1.5 months",
+    duration: "1 month",
   },
   {
     number: "02",
-    title: "Machine Learning Fundamentals",
-    subtitle: "Add-On : AI-Powered Feature Engineering",
+    title: "Search Engine Optimization (SEO)",
+    subtitle: "Add-On : Advanced SEO Techniques with AI",
     topics: [
-      "Supervised Learning Algorithms",
-      "Unsupervised Learning",
-      "Model Evaluation Metrics",
-      "Cross-Validation Techniques",
-      "Feature Selection and Engineering",
-      "Ensemble Methods",
-      "Hyperparameter Tuning",
+      "Keyword Research and Analysis",
+      "On-Page SEO",
+      "Off-Page SEO",
+      "Technical SEO",
+      "Local SEO",
+      "SEO Analytics and Reporting",
+      "SEO Tools and Software",
     ],
     duration: "2 months",
   },
   {
     number: "03",
-    title: "Deep Learning and Neural Networks",
-    subtitle: "Add-On : Neural Architecture Search with AI",
+    title: "Social Media Marketing",
+    subtitle: "Add-On : AI-Driven Social Media Campaigns",
     topics: [
-      "Neural Network Fundamentals",
-      "Deep Learning Frameworks",
-      "Convolutional Neural Networks",
-      "Recurrent Neural Networks",
-      "Transfer Learning",
-      "Model Deployment",
-      "GPU Acceleration",
+      "Social Media Strategy Development",
+      "Content Creation for Social Media",
+      "Paid Social Media Advertising",
+      "Social Media Analytics",
+      "Influencer Marketing",
+      "Community Management",
+      "Social Media Tools and Automation",
     ],
-    duration: "2.5 months",
+    duration: "2 months",
   },
   {
     number: "04",
-    title: "Big Data Analytics",
-    subtitle: "Add-On : Distributed Computing with AI Optimization",
+    title: "Pay-Per-Click (PPC) Advertising",
+    subtitle: "Add-On : AI-Optimized PPC Campaigns",
     topics: [
-      "Big Data Fundamentals",
-      "Apache Spark",
-      "Distributed Computing",
-      "Data Warehousing",
-      "ETL Pipelines",
-      "Data Lakes",
-      "Real-time Analytics",
+      "Introduction to PPC",
+      "Google Ads Fundamentals",
+      "Facebook Ads",
+      "LinkedIn Ads",
+      "PPC Campaign Management",
+      "Ad Copywriting",
+      "PPC Analytics and Optimization",
     ],
     duration: "2 months",
   },
   {
     number: "05",
-    title: "Applied Data Science and MLOps",
-    subtitle: "Add-On : AutoML and Model Optimization",
+    title: "Email Marketing and Automation",
+    subtitle: "Add-On : AI-Powered Email Campaigns",
     topics: [
-      "End-to-End ML Projects",
-      "Model Deployment Strategies",
-      "ML Pipeline Automation",
-      "Model Monitoring",
-      "A/B Testing",
-      "Business Analytics",
-      "Ethics in AI",
-      "Project Portfolio Development",
+      "Email Marketing Strategy",
+      "Email List Building",
+      "Email Copywriting",
+      "Email Design and Templates",
+      "Email Automation Tools",
+      "A/B Testing in Email Marketing",
+      "Email Analytics and Reporting",
     ],
-    duration: "3 months",
+    duration: "1.5 months",
+  },
+  {
+    number: "06",
+    title: "Digital Marketing Analytics",
+    subtitle: "Add-On : AI-Driven Marketing Insights",
+    topics: [
+      "Introduction to Marketing Analytics",
+      "Google Analytics",
+      "Data-Driven Decision Making",
+      "Conversion Rate Optimization",
+      "Customer Lifetime Value Analysis",
+      "Attribution Models",
+      "Marketing Dashboards and Reporting",
+    ],
+    duration: "2 months",
   },
 ];
 
@@ -172,12 +185,12 @@ export default function Curriculum() {
   const [selectedModule, setSelectedModule] = useState(fullStackModules[0]);
 
   const modules =
-    selectedCourse === "fullstack" ? fullStackModules : dataScienceModules;
+    selectedCourse === "fullstack" ? fullStackModules : digitalMarketingModules;
 
   const handleCourseChange = (course: string) => {
     setSelectedCourse(course);
     setSelectedModule(
-      course === "fullstack" ? fullStackModules[0] : dataScienceModules[0]
+      course === "fullstack" ? fullStackModules[0] : digitalMarketingModules[0]
     );
   };
 
@@ -195,7 +208,7 @@ export default function Curriculum() {
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
             {selectedCourse === "fullstack"
               ? "Master full-stack development with our comprehensive curriculum designed in collaboration with industry experts. Learn by building real-world projects and gain hands-on experience with the latest technologies."
-              : "Become a data science expert with our industry-aligned curriculum. Learn from real-world case studies and gain practical experience in machine learning, deep learning, and big data analytics."}
+              : "Become a digital marketing expert with our industry-aligned curriculum. Learn from real-world case studies and gain practical experience in SEO, social media marketing, PPC, and more."}
           </p>
 
           {/* Course Selection Buttons */}
@@ -211,14 +224,14 @@ export default function Curriculum() {
               Full Stack Development
             </Button>
             <Button
-              onClick={() => handleCourseChange("datascience")}
+              onClick={() => handleCourseChange("digitalmarketing")}
               className={`px-8 py-3 rounded-xl text-base font-medium transition-all duration-300 transform hover:scale-105 ${
-                selectedCourse === "datascience"
+                selectedCourse === "digitalmarketing"
                   ? "bg-red-600 text-white shadow-lg shadow-red-500/30"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             >
-              Data Science
+              Digital Marketing
             </Button>
           </div>
         </div>
