@@ -195,27 +195,27 @@ export default function Curriculum() {
   };
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-black">
+    <section className="py-12 px-4 md:px-12 bg-black">
       <div className="container mx-auto space-y-8">
         <div className="space-y-4 text-center">
-          <h2 className="text-4xl font-bold inline-flex items-center gap-2 justify-center">
+          <h2 className="text-3xl sm:text-4xl font-bold inline-flex items-center gap-2 justify-center">
             Curriculum and{" "}
-            <span className="text-red-600 underline decoration-red-600 relative ">
+            <span className="text-red-600 underline decoration-red-600 relative">
               Learning Track
             </span>
           </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-3xl mx-auto text-base sm:text-lg">
             {selectedCourse === "fullstack"
               ? "Master full-stack development with our comprehensive curriculum designed in collaboration with industry experts. Learn by building real-world projects and gain hands-on experience with the latest technologies."
               : "Become a digital marketing expert with our industry-aligned curriculum. Learn from real-world case studies and gain practical experience in SEO, social media marketing, PPC, and more."}
           </p>
 
           {/* Course Selection Buttons */}
-          <div className="flex justify-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 pt-4">
             <Button
               onClick={() => handleCourseChange("fullstack")}
-              className={`px-8 py-3 rounded-xl text-base font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`px-6 py-2 sm:px-8 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition-all duration-300 transform hover:scale-105 ${
                 selectedCourse === "fullstack"
                   ? "bg-red-600 text-white shadow-lg shadow-red-500/30"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
@@ -225,7 +225,7 @@ export default function Curriculum() {
             </Button>
             <Button
               onClick={() => handleCourseChange("digitalmarketing")}
-              className={`px-8 py-3 rounded-xl text-base font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`px-6 py-2 sm:px-8 sm:py-3 rounded-xl text-sm sm:text-base font-medium transition-all duration-300 transform hover:scale-105 ${
                 selectedCourse === "digitalmarketing"
                   ? "bg-red-600 text-white shadow-lg shadow-red-500/30"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
@@ -236,7 +236,7 @@ export default function Curriculum() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col md:flex-row gap-6">
           {/* Left Column - Modules List */}
           <div className="md:w-7/12 space-y-4">
             {modules.map((module, index) => (
@@ -274,11 +274,13 @@ export default function Curriculum() {
           </div>
 
           {/* Right Column - Selected Module Details */}
-          <div className="md:w-5/12 bg-gray-900/50 rounded-lg p-6">
+          <div className="md:w-5/12 bg-gray-900/50 rounded-lg p-4 sm:p-6">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold text-white">Topic</h3>
+              <h3 className="text-lg sm:text-xl font-semibold text-white">
+                Topic
+              </h3>
               {selectedModule.duration && (
-                <span className="text-base text-gray-300">
+                <span className="text-sm sm:text-base text-gray-300">
                   Duration:{" "}
                   <span className="text-red-600">
                     {selectedModule.duration}
@@ -286,9 +288,9 @@ export default function Curriculum() {
                 </span>
               )}
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 max-h-[300px] overflow-y-auto">
               {selectedModule.topics.map((topic, index) => (
-                <p key={index} className="text-gray-300 text-base">
+                <p key={index} className="text-gray-300 text-sm sm:text-base">
                   {topic}
                 </p>
               ))}
